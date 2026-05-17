@@ -1,0 +1,66 @@
+---
+---
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 relative py-20">
+<div class="absolute inset-0 z-[-1] opacity-20">
+<img alt="Background showing hand-sketched diagrams morphing into neon tech" class="w-full h-full object-cover" data-alt="A highly detailed visualization of complex data architecture. The left side features rough, white chalk-like sketches of database schemas and entity-relationship diagrams on a textured dark chalkboard. As the image progresses to the right, these lines morph into a glowing, 3D neon neural network with vibrant cyan and purple nodes, symbolizing the transition from messy strategy to high-fidelity execution. The lighting is dark and moody, emphasizing the luminescence of the digital elements against an obsidian background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAev646KmRKuM1UgdvSGVPvDB1CDSRsKC36M6fsoY_CaltdISNt8BmELWpW43b_ncgEbMJS8KHU3tPJ9FYH_frKQNoGR8ob8s542R5SloXCTFiWKFNYZQRVV2YaLnQk1NVrCtjuDJbO9S119rTaNt83uqOufYKPEulNFrmiiyxdMy2mLHIe2wm-FzpJlRVfvNPILiFCdp-virVCfrHPsOXa25PojrBhxpve3iMFkVsHsUQ2i0wzpZej_cRN0fadmQuXOqs55E27vGZd"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-surface/40"></div>
+</div>
+<div class="w-full md:w-3/5 space-y-8 z-10">
+<h1 class="font-display-xl text-display-xl text-primary drop-shadow-[0_0_15px_rgba(0,240,255,0.3)]">
+                    Freshman Data Analyst & Business Analyst <span class="text-secondary">(Still Learning...)</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl border-l-2 border-secondary pl-6"><span id="typewriter-text"></span><span class="cursor-blink"></span></p>
+</div>
+</section>
+
+<script is:inline>
+  (function() {
+    console.log("Typewriter: Initializing...");
+    const phrases = [
+        "A Data Enthusiast trying to be a Data Analyst & Business Analyst",
+        "Open for any opportunity (Internship or Full-Time)"
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const textElement = document.getElementById('typewriter-text');
+        if (!textElement) {
+            console.warn("Typewriter: target element not found, retrying...");
+            setTimeout(type, 500);
+            return;
+        }
+        
+        const currentPhrase = phrases[phraseIndex];
+        
+        if (isDeleting) {
+            textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let speed = isDeleting ? 30 : 60;
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true;
+            speed = 2500;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            speed = 500;
+        }
+
+        setTimeout(type, speed);
+    }
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        type();
+    } else {
+        window.addEventListener('DOMContentLoaded', type);
+    }
+  })();
+</script>

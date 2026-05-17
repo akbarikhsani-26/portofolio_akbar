@@ -1,0 +1,134 @@
+---
+
+---
+
+<!-- Identity Section -->
+<section
+  class="min-h-screen flex flex-col justify-center py-20 space-y-12"
+  id="about"
+>
+  <div class="flex items-center gap-4 justify-end">
+    <h2
+      class="font-label-mono text-label-mono text-secondary uppercase tracking-widest text-right"
+    >
+      Identity
+    </h2>
+    <div class="h-px w-12 bg-secondary"></div>
+  </div>
+
+  <div class="grid md:grid-cols-12 gap-16 items-center">
+    <!-- Image Box (Left) -->
+    <div class="md:col-span-5 relative group">
+      <div
+        class="relative aspect-[4/5] bg-surface-container-low border border-outline-variant overflow-hidden group-hover:border-primary transition-colors duration-500"
+      >
+        <!-- Scanline Animation Overlay -->
+        <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+          <div class="w-full h-[2px] bg-primary/20 animate-scanline opacity-50">
+          </div>
+        </div>
+
+        <!-- Corner Accents -->
+        <div
+          class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-primary z-20"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-primary z-20"
+        >
+        </div>
+
+        <img
+          src="/media/hero-portrait.png"
+          alt="Nurvianto Akbar Ikhsani"
+          class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+        />
+
+        <!-- Background Shadow Glow -->
+        <div
+          class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500"
+        >
+        </div>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div
+        class="absolute -bottom-4 -left-4 w-full h-full border border-secondary/20 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"
+      >
+      </div>
+      <div
+        class="absolute -top-4 -right-4 w-24 h-24 border-t border-r border-tertiary-fixed/20 -z-10"
+      >
+      </div>
+    </div>
+
+    <!-- Content (Right) -->
+    <div class="md:col-span-7 space-y-8">
+      <div class="space-y-2">
+        <h2
+          class="font-display-xl text-display-xl text-on-surface leading-tight"
+        >
+          Hi, I'm Nurvianto Akbar Ikhsani
+        </h2>
+        <p class="font-label-mono text-secondary uppercase tracking-widest">
+          Freshman Data Analyst
+        </p>
+      </div>
+
+      <div
+        class="space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed border-l-2 border-outline-variant pl-8"
+      >
+        <p>
+          I am a Computer Science student at Muhammadiyah University of Malang
+          (GPA 3.67), specializing in Data Science. I have a strong passion for
+          transforming raw data into actionable insights through analysis and
+          visualization.
+        </p>
+        <p>
+          With core expertise in Python and a deep interest in Business
+          Intelligence, I thrive on solving complex problems and building
+          efficient data architectures. My goal is to apply my analytical
+          abilities to create high-value solutions for real-world industry
+          challenges.
+        </p>
+      </div>
+
+      <div class="pt-8">
+        <div class="flex gap-4 items-center">
+          <span
+            class="font-label-mono text-xs text-on-surface-variant/50 uppercase"
+            >Core_Focus:</span
+          >
+          <div class="flex gap-2">
+            <span
+              class="px-3 py-1 bg-surface-container border border-outline-variant text-[10px] font-label-mono text-primary uppercase"
+              >Data_Analysis</span
+            >
+            <span
+              class="px-3 py-1 bg-surface-container border border-outline-variant text-[10px] font-label-mono text-secondary uppercase"
+              >ML_Optimization</span
+            >
+            <span
+              class="px-3 py-1 bg-surface-container border border-outline-variant text-[10px] font-label-mono text-tertiary-fixed uppercase"
+              >Visualization</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes scanline {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  .animate-scanline {
+    animation: scanline 6s linear infinite;
+  }
+</style>

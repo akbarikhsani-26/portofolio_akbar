@@ -1,0 +1,132 @@
+---
+const certificates = [
+  {
+    title: "Bachelor of Informatics Engineering",
+    issuer: "Universitas Muhammadiyah Malang",
+    date: "12 Desember 2025",
+    code: "BACHELOR_IT_001",
+    url: "https://drive.google.com/file/d/1CeQYlJoGX5AHGv3Cr4gxiYNvMPUJpdDH/view?usp=sharing",
+    image: "/assets/certificates/bachelor.png"
+  },
+  {
+    title: "Transkrip Akademik",
+    issuer: "Universitas Muhammadiyah Malang",
+    date: "12 Desember 2025",
+    code: "TRANSCRIPT_IT_001",
+    url: "https://drive.google.com/file/d/1fyzNpxbdVxYlxgsqrNi9pOm1mMzma8Zn/view?usp=sharing",
+    image: "/assets/certificates/transcript.png"
+  },
+  {
+    title: "Test of Academic English Proficiency",
+    issuer: "Lembaga Bahasa Universitas Muhammadiyah Malang",
+    date: "06 March 2025",
+    code: "TAEP_UMM_001",
+    url: "https://drive.google.com/file/d/15LzOJa0ORQfSi_DGNbsAvgx1P0vFXDqr/view?usp=sharing",
+    image: "/assets/certificates/english.png"
+  },
+  {
+    title: "AI Praktis untuk Produktivitas",
+    issuer: "Dicoding",
+    date: "April 2026",
+    code: "CERT_PL_001",
+    url: "https://drive.google.com/file/d/1FpJh_L0IG_KfIBdHJI5m3OuJddWEfWhI/view?usp=drive_link",
+    image: "/assets/certificates/ai.png"
+  },
+  {
+    title: "Java Foundation",
+    issuer: "Oracle Academy",
+    date: "August 2022",
+    code: "CERT_PL_002",
+    url: "https://drive.google.com/file/d/13HKgBLZkYC_hR_tdXhAJ5swGHf4Vfy-7/view?usp=drive_link",
+    image: "/assets/certificates/java.png"
+  },
+  {
+    title: "Entrepreneurial Marketing : The Punakawan Spirit ",
+    issuer: "ACSB Indonesia",
+    date: "Mei 2023",
+    code: "CERT_SM_001",
+    url: "https://drive.google.com/file/d/1e1FwdYupTIAKlhw9FoyD_QuBQVhekF1Q/view?usp=sharing",
+    image: "/assets/certificates/marketing.png"
+  },
+  {
+    title: "Cara Memaksimalkan Platform Media Sosial untuk Promosi UMKM ",
+    issuer: "Kementrian Komunikasi dan Informatika bekerja sama dengan Yayasan Kabar Pintar",
+    date: "Juli 2023",
+    code: "CERT_SM_002",
+    url: "https://drive.google.com/file/d/10PxMQ7N1RXILD-y9EuSG6hr3nvq8wObP/view?usp=sharing",
+    image: "/assets/certificates/social_media.png"
+  }
+];
+---
+
+<!-- Credentials Section -->
+<section class="min-h-screen flex flex-col justify-center py-20 space-y-12" id="credentials">
+  <div class="flex items-center gap-4">
+    <div class="h-px w-12 bg-primary"></div>
+    <h2 class="font-label-mono text-label-mono text-primary uppercase tracking-widest">CERTIFICATES</h2>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    {certificates.map(cert => (
+      <div class="group relative bg-surface-container-low border border-outline-variant p-0 flex flex-col justify-between transition-all duration-500 hover:border-primary/50 overflow-hidden">
+        <!-- Certificate Illustration -->
+        <div class="relative w-full h-48 overflow-hidden bg-surface-container">
+          <img 
+            src={cert.image} 
+            alt={cert.title} 
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent opacity-80"></div>
+          
+          <!-- Code Overlay -->
+          <div class="absolute top-4 left-4">
+             <span class="px-2 py-1 bg-surface/80 backdrop-blur-sm border border-outline-variant text-[10px] font-label-mono text-primary uppercase tracking-widest">{cert.code}</span>
+          </div>
+          
+          <!-- Status Icon -->
+          <div class="absolute top-4 right-4 opacity-20 group-hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined text-primary text-xl" data-icon="verified">verified</span>
+          </div>
+        </div>
+
+        <div class="p-6 space-y-4 flex-grow">
+          <div class="space-y-1">
+            <h3 class="font-headline-md text-[18px] text-on-surface leading-tight min-h-[2.5rem]">{cert.title}</h3>
+            <p class="font-body-md text-on-surface-variant font-semibold text-xs">{cert.issuer}</p>
+          </div>
+          
+          <div class="pt-2 border-t border-outline-variant/30">
+            <p class="font-label-mono text-[10px] text-on-surface-variant/70 uppercase">{cert.date}</p>
+          </div>
+        </div>
+
+        <div class="px-6 pb-6">
+          <a 
+            href={cert.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center gap-3 px-4 py-3 border border-primary/30 text-primary font-label-mono text-xs tracking-widest uppercase hover:bg-primary/10 hover:border-primary transition-all group/btn"
+          >
+            <span>Access_Document</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Scanline Animation (Subtle) -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity">
+          <div class="w-full h-[1px] bg-primary/20 absolute top-0 animate-scanline"></div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  @keyframes scanline {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(400px); }
+  }
+  .animate-scanline {
+    animation: scanline 4s linear infinite;
+  }
+</style>

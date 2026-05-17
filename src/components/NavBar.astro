@@ -1,0 +1,266 @@
+---
+---
+
+<!-- TopNavBar Component -->
+<header
+    class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500"
+>
+    <nav
+        class="flex items-center justify-between px-8 py-4 w-full relative"
+    >
+        <!-- Logo (Left Column) -->
+        <div class="flex flex-1 justify-start">
+            <div
+                class="font-headline-md text-headline-md text-primary font-bold tracking-normal whitespace-nowrap"
+            >
+                AKBAR_PORTFOLIO[v1.0]
+            </div>
+        </div>
+        <!-- Desktop Navigation (Center Column) -->
+        <div class="hidden md:flex flex-1 justify-center">
+            <div
+                class="flex gap-4 bg-surface-container-low/50 border border-outline-variant/30 rounded-full p-1 relative shadow-inner overflow-hidden"
+                id="nav-container"
+            >
+                <!-- Sliding Pill Indicator -->
+                <div
+                    class="absolute bg-primary/10 rounded-full transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] z-0"
+                    id="nav-pill"
+                >
+                </div>
+                <a
+                    class="nav-item px-8 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-widest transition-colors duration-300 z-10 text-on-surface-variant hover:text-primary"
+                    href="#about"
+                    data-section="about">IDENTITY</a
+                >
+                <a
+                    class="nav-item px-8 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-widest transition-colors duration-300 z-10 text-on-surface-variant hover:text-primary"
+                    href="#experience"
+                    data-section="experience">EXPERIENCE</a
+                >
+                <a
+                    class="nav-item px-8 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-widest transition-colors duration-300 z-10 text-on-surface-variant hover:text-primary"
+                    href="#strategy"
+                    data-section="strategy">STRATEGY</a
+                >
+                <a
+                    class="nav-item px-8 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-widest transition-colors duration-300 z-10 text-on-surface-variant hover:text-primary"
+                    href="#systems"
+                    data-section="systems">SYSTEMS</a
+                >
+                <a
+                    class="nav-item px-8 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-widest transition-colors duration-300 z-10 text-on-surface-variant hover:text-primary"
+                    href="#credentials"
+                    data-section="credentials">CERTIFICATES</a
+                >
+                <a
+                    class="nav-item px-8 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-widest transition-colors duration-300 z-10 text-on-surface-variant hover:text-primary"
+                    href="#solutions"
+                    data-section="solutions">SOLUTIONS</a
+                >
+            </div>
+        </div>
+        <!-- Connect & Menu (Right Column) -->
+        <div class="flex-1 flex justify-end items-center gap-4">
+            <a
+                href="https://www.linkedin.com/in/nurvianto-akbar-ikhsani"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hidden md:flex items-center px-6 py-2 border border-outline text-primary font-label-mono text-label-mono tracking-widest rounded-none glitch-hover transition-all bg-transparent decoration-none hover:bg-primary/5 active:scale-95"
+            >
+                CONNECT LINKEDIN.EXE
+            </a>
+            <!-- Mobile Menu Button -->
+            <button
+                class="md:hidden text-primary z-50 hover:bg-primary/10 p-2 rounded-full transition-colors"
+                id="menu-toggle"
+            >
+                <span class="material-symbols-outlined" id="menu-icon"
+                    >menu</span
+                >
+            </button>
+        </div>
+        <!-- Mobile Navigation Overlay -->
+        <div
+            class="fixed inset-0 bg-surface/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-500 md:hidden"
+            id="mobile-menu"
+        >
+            <a
+                class="nav-item mobile-nav-item text-2xl font-label-mono text-on-surface-variant tracking-widest hover:text-primary transition-colors"
+                href="#about"
+                data-section="about">IDENTITY</a
+            >
+            <a
+                class="nav-item mobile-nav-item text-2xl font-label-mono text-on-surface-variant tracking-widest hover:text-primary transition-colors"
+                href="#experience"
+                data-section="experience">EXPERIENCE</a
+            >
+            <a
+                class="nav-item mobile-nav-item text-2xl font-label-mono text-on-surface-variant tracking-widest hover:text-primary transition-colors"
+                href="#strategy"
+                data-section="strategy">STRATEGY</a
+            >
+            <a
+                class="nav-item mobile-nav-item text-2xl font-label-mono text-on-surface-variant tracking-widest hover:text-primary transition-colors"
+                href="#systems"
+                data-section="systems">SYSTEMS</a
+            >
+            <a
+                class="nav-item mobile-nav-item text-2xl font-label-mono text-on-surface-variant tracking-widest hover:text-primary transition-colors"
+                href="#credentials"
+                data-section="credentials">CREDENTIALS</a
+            >
+            <a
+                class="nav-item mobile-nav-item text-2xl font-label-mono text-on-surface-variant tracking-widest hover:text-primary transition-colors"
+                href="#solutions"
+                data-section="solutions">SOLUTIONS</a
+            >
+            <a
+                href="https://www.linkedin.com/in/nurvianto-akbar-ikhsani"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 px-8 py-4 border border-primary text-primary font-label-mono tracking-widest decoration-none hover:bg-primary/10 transition-all active:scale-95"
+            >
+                CONNECT LINKEDIN.EXE
+            </a>
+        </div>
+    </nav>
+</header>
+<script is:inline>
+    const header = document.querySelector("header");
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navPill = document.getElementById("nav-pill");
+    const sections = [
+        "about",
+        "experience",
+        "strategy",
+        "systems",
+        "credentials",
+        "solutions",
+    ];
+
+    // Header background transition and fade-on-scroll logic
+    let hideTimeout;
+    let showTimeout;
+    
+    window.addEventListener("scroll", () => {
+        if (!header) return;
+
+        // Clear show timeout because we are moving
+        clearTimeout(showTimeout);
+
+        // Start hide timer if not already started
+        if (!hideTimeout) {
+            hideTimeout = setTimeout(() => {
+                header.style.opacity = "0";
+                header.style.pointerEvents = "none";
+            }, 200); // 200ms delay before hiding
+        }
+
+        // Set timer to show when scrolling stops
+        showTimeout = setTimeout(() => {
+            clearTimeout(hideTimeout);
+            hideTimeout = null;
+            header.style.opacity = "1";
+            header.style.pointerEvents = "auto";
+        }, 500); // 500ms of no movement to reappear
+
+        if (window.scrollY > 20) {
+            header.classList.add("bg-surface/95", "py-2");
+            header.classList.remove("bg-surface/80", "py-4");
+        } else {
+            header.classList.add("bg-surface/80", "py-4");
+            header.classList.remove("bg-surface/95", "py-2");
+        }
+    });
+
+    // Toggle Mobile Menu
+    menuToggle?.addEventListener("click", () => {
+        const isOpen = mobileMenu?.classList.contains("opacity-100");
+        if (isOpen) {
+            mobileMenu?.classList.add("opacity-0", "pointer-events-none");
+            mobileMenu?.classList.remove("opacity-100");
+            menuIcon.textContent = "menu";
+        } else {
+            mobileMenu?.classList.remove("opacity-0", "pointer-events-none");
+            mobileMenu?.classList.add("opacity-100");
+            menuIcon.textContent = "close";
+        }
+    });
+
+    // Active State & Pill Management
+    const updateActiveLink = (id) => {
+        navItems.forEach((item) => {
+            const section = item.getAttribute("data-section");
+            const isMobile = item.classList.contains("mobile-nav-item");
+
+            if (section === id) {
+                item.classList.add("text-primary");
+                item.classList.remove("text-on-surface-variant");
+
+                // Move the sliding pill (only for desktop)
+                if (!isMobile && navPill && item instanceof HTMLElement) {
+                    navPill.style.width = `${item.offsetWidth}px`;
+                    navPill.style.left = `${item.offsetLeft}px`;
+                    navPill.style.height = `${item.offsetHeight}px`;
+                    navPill.style.top = `${item.offsetTop}px`;
+                }
+            } else {
+                item.classList.remove("text-primary");
+                item.classList.add("text-on-surface-variant");
+            }
+        });
+    };
+
+    // Click handling for immediate feedback
+    navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            const section = item.getAttribute("data-section");
+            if (section) updateActiveLink(section);
+
+            // Close mobile menu
+            mobileMenu?.classList.add("opacity-0", "pointer-events-none");
+            mobileMenu?.classList.remove("opacity-100");
+            if (menuIcon) menuIcon.textContent = "menu";
+        });
+    });
+
+    // Intersection Observer for scroll tracking
+    const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -70% 0px",
+        threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                updateActiveLink(entry.target.id);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) observer.observe(section);
+    });
+
+    // Initial positioning
+    setTimeout(() => {
+        const activeSection =
+            sections.find((id) => {
+                const rect = document
+                    .getElementById(id)
+                    ?.getBoundingClientRect();
+                return (
+                    rect &&
+                    rect.top < window.innerHeight / 2 &&
+                    rect.bottom > window.innerHeight / 2
+                );
+            }) || "strategy";
+        updateActiveLink(activeSection);
+    }, 100);
+</script>

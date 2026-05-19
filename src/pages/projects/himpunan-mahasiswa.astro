@@ -1,0 +1,412 @@
+---
+import Layout from "../../layouts/main.astro";
+---
+
+<Layout title="Himpunan Mahasiswa Informatika - Experience Documentation">
+    <style>
+        .paper-shadow {
+            box-shadow:
+                0 10px 30px rgba(6, 182, 212, 0.05),
+                0 0 0 1px rgba(6, 182, 212, 0.1);
+        }
+
+        .tape-left {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            width: 80px;
+            height: 30px;
+            background-color: rgba(79, 70, 229, 0.3);
+            transform: rotate(-3deg);
+            z-index: 10;
+        }
+
+        .tape-right {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            width: 80px;
+            height: 30px;
+            background-color: rgba(79, 70, 229, 0.3);
+            transform: rotate(2deg);
+            z-index: 10;
+        }
+
+        .tape-center {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            width: 80px;
+            height: 30px;
+            background-color: rgba(6, 182, 212, 0.3);
+            transform: translateX(-50%) rotate(-2deg);
+            z-index: 10;
+        }
+
+        .blueprint-grid {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.03) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.03) 1px,
+                    transparent 1px
+                );
+        }
+    </style>
+
+    <div
+        class="blueprint-grid min-h-screen relative py-20 px-4 md:px-12 flex justify-center items-start mt-10"
+    >
+        <!-- Floating Back to Portfolio Button -->
+        <div class="fixed top-4 left-4 md:top-8 md:left-8 z-50">
+            <a href="/#experience" class="relative inline-block group">
+                <span
+                    class="absolute inset-0 w-full h-full bg-secondary/20 border border-secondary/30 rounded-sm translate-x-1 translate-y-1 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"
+                ></span>
+                <span
+                    class="relative flex items-center gap-2 px-4 py-2 bg-surface/80 backdrop-blur-md border border-outline-variant text-secondary font-label-mono text-xs uppercase tracking-wider rounded-sm transition-transform group-hover:translate-x-1 group-hover:translate-y-1 active:translate-x-0.5 active:translate-y-0.5"
+                >
+                    <span class="material-symbols-outlined text-[16px]"
+                        >arrow_back</span
+                    >
+                    Back to Portfolio
+                </span>
+            </a>
+        </div>
+
+        <!-- The Paper -->
+        <main
+            class="w-full max-w-[1000px] bg-surface-container-low paper-shadow rounded-sm relative transition-all duration-500 ease-in-out transform md:rotate-[0.5deg] hover:rotate-0 hover:-translate-y-1"
+        >
+            <!-- Tape Accents -->
+            <div class="tape-left hidden md:block"></div>
+            <div class="tape-right hidden md:block"></div>
+
+            <!-- Header Section -->
+            <header class="border-b border-outline-variant p-8 md:p-12">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4"
+                >
+                    <div>
+                        <h1
+                            class="font-headline-lg text-4xl md:text-5xl text-secondary mb-4 font-bold tracking-tight"
+                        >
+                            Himpunan Mahasiswa Informatika
+                        </h1>
+                        <p
+                            class="font-body-md text-lg text-on-surface-variant flex items-center gap-2"
+                        >
+                            <span
+                                class="material-symbols-outlined text-outline"
+                                style="font-variation-settings: 'FILL' 0;"
+                                >groups</span
+                            >
+                            Anggota Bidang Pengabdian Masyarakat
+                        </p>
+                        <p
+                            class="font-body-md text-lg text-on-surface-variant flex items-center gap-2"
+                        >
+                            <span
+                                class="material-symbols-outlined text-outline"
+                                style="font-variation-settings: 'FILL' 0;"
+                                >calendar_today</span
+                            >
+                            November 2022 - December 2023
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="p-8 md:p-12 space-y-16">
+                <!-- Section 1: Overview -->
+                <section>
+                    <div
+                        class="flex items-center gap-4 mb-6 border-b border-outline-variant pb-2"
+                    >
+                        <span
+                            class="material-symbols-outlined text-secondary"
+                            style="font-variation-settings: 'FILL' 1;"
+                            >overview</span
+                        >
+                        <h2 class="font-headline-md text-2xl text-secondary">
+                            Overview
+                        </h2>
+                    </div>
+                    <p
+                        class="font-body-lg text-on-surface-variant mb-10 max-w-3xl leading-relaxed text-justify"
+                    >
+                        Menjadi bagian aktif dari Himpunan Mahasiswa Informatika
+                        (HMIF) dalam Bidang Pengabdian Masyarakat untuk membantu
+                        menghubungkan dunia akademis dengan masyarakat. Melalui
+                        divisi ini, kami menyusun, mengelola, serta
+                        merealisasikan berbagai program kerja sosial, literasi
+                        teknologi, dan kepedulian kemanusiaan demi mewujudkan
+                        Tri Dharma Perguruan Tinggi.
+                    </p>
+                    <div class="mt-8">
+                        <h3
+                            class="font-headline-md text-xl text-secondary mb-3"
+                        >
+                            Detail Peran
+                        </h3>
+                        <p
+                            class="font-body-md text-on-surface-variant text-justify max-w-3xl leading-relaxed"
+                        >
+                            Sebagai anggota bidang Pengabdian Masyarakat, saya
+                            bertanggung jawab atas perancangan program kerja
+                            pengabdian kepada masyarakat, pelaksanaan kegiatan
+                            sosial kemasyarakatan, serta menjalin komunikasi
+                            yang efektif antara pihak himpunan, mahasiswa, dan
+                            masyarakat sasaran demi memastikan kelancaran setiap
+                            program kerja.
+                        </p>
+                    </div>
+                </section>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Feature Card 1 -->
+                    <div
+                        class="border border-outline-variant p-6 bg-surface transition-colors hover:bg-surface-variant group"
+                    >
+                        <div class="flex items-center gap-2 mb-4">
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors"
+                                style="font-variation-settings: 'FILL' 0;"
+                                >local_library</span
+                            >
+                            <h3 class="font-headline-md text-lg text-secondary">
+                                Literasi Teknologi
+                            </h3>
+                        </div>
+                        <p
+                            class="font-body-md text-sm text-on-surface-variant text-justify"
+                        >
+                            Memberikan pelatihan pemanfaatan perangkat digital
+                            dan edukasi pemakaian internet sehat bagi generasi
+                            muda dan warga sekitar.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div
+                        class="border border-outline-variant p-6 bg-surface transition-colors hover:bg-surface-variant group"
+                    >
+                        <div class="flex items-center gap-2 mb-4">
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors"
+                                style="font-variation-settings: 'FILL' 0;"
+                                >volunteer_activism</span
+                            >
+                            <h3 class="font-headline-md text-lg text-secondary">
+                                Aksi Sosial
+                            </h3>
+                        </div>
+                        <p
+                            class="font-body-md text-sm text-on-surface-variant text-justify"
+                        >
+                            Menginisiasi dan mengoordinasikan kegiatan
+                            penggalangan dana kemanusiaan serta bakti sosial
+                            secara berkala.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div
+                        class="border border-outline-variant p-6 bg-surface transition-colors hover:bg-surface-variant group"
+                    >
+                        <div class="flex items-center gap-2 mb-4">
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors"
+                                style="font-variation-settings: 'FILL' 0;"
+                                >handshake</span
+                            >
+                            <h3 class="font-headline-md text-lg text-secondary">
+                                Kolaborasi Tim
+                            </h3>
+                        </div>
+                        <p
+                            class="font-body-md text-sm text-on-surface-variant text-justify"
+                        >
+                            Berkolaborasi aktif antar divisi himpunan mahasiswa
+                            serta pihak luar guna menyelaraskan visi misi
+                            organisasi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Section 2: Photo Documentation -->
+                <section>
+                    <div
+                        class="flex items-center gap-4 mb-6 border-b border-outline-variant pb-2"
+                    >
+                        <span
+                            class="material-symbols-outlined text-secondary"
+                            style="font-variation-settings: 'FILL' 1;"
+                            >photo_library</span
+                        >
+                        <h2 class="font-headline-md text-2xl text-secondary">
+                            Photo Documentation
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-6">
+                        <!-- Photo 1 -->
+                        <div
+                            class="bg-surface p-3 pb-10 border border-outline-variant shadow-xl relative w-full transform rotate-[2deg] hover:rotate-0 transition-transform duration-300"
+                        >
+                            <div class="tape-center"></div>
+                            <img
+                                src="/media/Hmif-1.png"
+                                alt="HMIF foto 1"
+                                class="w-full aspect-[4/3] border border-outline-variant/10 grayscale hover:grayscale-0 transition-all duration-500 object-cover"
+                            />
+                            <p
+                                class="font-label-mono text-center text-xs text-on-surface-variant mt-4 font-bold tracking-widest"
+                            >
+                                FIG 1. RAPAT DAN KOORDINASI TIM
+                            </p>
+                        </div>
+
+                        <!-- Photo 2 -->
+                        <div
+                            class="bg-surface p-3 pb-10 border border-outline-variant shadow-xl relative w-full transform -rotate-[1.5deg] hover:rotate-0 transition-transform duration-300"
+                        >
+                            <div
+                                class="tape-center"
+                                style="transform: translateX(-50%) rotate(3deg); background-color: rgba(6, 182, 212, 0.3);"
+                            >
+                            </div>
+                            <img
+                                src="/media/Hmif-2.jpg"
+                                alt="HMIF foto 2"
+                                class="w-full aspect-[4/3] border border-outline-variant/30 grayscale hover:grayscale-0 transition-all duration-500 object-cover"
+                            />
+                            <p
+                                class="font-label-mono text-center text-xs text-on-surface-variant mt-4 font-bold tracking-widest"
+                            >
+                                FIG 2. SOSIALISASI PROGRAM KERJA PENGMAS
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface p-3 pb-10 border border-outline-variant shadow-xl relative w-full transform -rotate-[1.5deg] hover:rotate-0 transition-transform duration-300"
+                        >
+                            <div
+                                class="tape-center"
+                                style="transform: translateX(-50%) rotate(3deg); background-color: rgba(6, 182, 212, 0.3);"
+                            >
+                            </div>
+                            <img
+                                src="/media/Hmif-3.JPG"
+                                alt="HMIF foto 3"
+                                class="w-full aspect-[4/3] border border-outline-variant/30 grayscale hover:grayscale-0 transition-all duration-500 object-cover"
+                            />
+                            <p
+                                class="font-label-mono text-center text-xs text-on-surface-variant mt-4 font-bold tracking-widest"
+                            >
+                                FIG 3. KEGIATAN LITERASI TEKNOLOGI
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface p-3 pb-10 border border-outline-variant shadow-xl relative w-full transform -rotate-[1.5deg] hover:rotate-0 transition-transform duration-300"
+                        >
+                            <div
+                                class="tape-center"
+                                style="transform: translateX(-50%) rotate(3deg); background-color: rgba(6, 182, 212, 0.3);"
+                            >
+                            </div>
+                            <img
+                                src="/media/Hmif-4.JPG"
+                                alt="HMIF foto 4"
+                                class="w-full aspect-[4/3] border border-outline-variant/30 grayscale hover:grayscale-0 transition-all duration-500 object-cover"
+                            />
+                            <p
+                                class="font-label-mono text-center text-xs text-on-surface-variant mt-4 font-bold tracking-widest"
+                            >
+                                FIG 4. FOTO BERSAMA ANGGOTA PENGMAS
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Tools & Methodologies -->
+                <section>
+                    <div
+                        class="flex items-center gap-4 mb-6 border-b border-outline-variant pb-2"
+                    >
+                        <span
+                            class="material-symbols-outlined text-secondary"
+                            style="font-variation-settings: 'FILL' 1;"
+                            >terminal</span
+                        >
+                        <h2 class="font-headline-md text-2xl text-secondary">
+                            Tools & Skills
+                        </h2>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <!-- Chip 1 -->
+                        <div
+                            class="flex items-center gap-2 border border-outline-variant px-4 py-2 bg-surface font-label-mono text-xs text-secondary relative -rotate-[0.5deg] hover:rotate-0 transition-transform"
+                        >
+                            <span class="material-symbols-outlined text-[18px]"
+                                >dashboard</span
+                            >
+                            Trello
+                        </div>
+                        <!-- Chip 2 -->
+                        <div
+                            class="flex items-center gap-2 border border-outline-variant px-4 py-2 bg-surface font-label-mono text-xs text-secondary relative rotate-[0.5deg] hover:rotate-0 transition-transform"
+                        >
+                            <span class="material-symbols-outlined text-[18px]"
+                                >palette</span
+                            >
+                            Canva
+                        </div>
+                        <!-- Chip 3 -->
+                        <div
+                            class="flex items-center gap-2 border border-outline-variant px-4 py-2 bg-surface font-label-mono text-xs text-secondary relative -rotate-[1deg] hover:rotate-0 transition-transform"
+                        >
+                            <span class="material-symbols-outlined text-[18px]"
+                                >description</span
+                            >
+                            Google Workspace
+                        </div>
+                        <!-- Chip 4 -->
+                        <div
+                            class="flex items-center gap-2 border border-outline-variant px-4 py-2 bg-surface font-label-mono text-xs text-secondary relative rotate-[1deg] hover:rotate-0 transition-transform"
+                        >
+                            <span class="material-symbols-outlined text-[18px]"
+                                >forum</span
+                            >
+                            Team Coordination
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer / Page Numbering -->
+            <footer
+                class="border-t border-outline-variant p-4 flex justify-between items-center bg-surface font-label-mono text-xs text-on-surface-variant"
+            >
+                <span>Doc Ref: HMIF-01</span>
+
+                <a
+                    href="/#experience"
+                    class="hover:text-primary transition-colors flex items-center gap-1"
+                >
+                    <span class="material-symbols-outlined text-[14px]"
+                        >arrow_back</span
+                    >
+                    Back to Portfolio
+                </a>
+
+                <span>Page 1 of 1</span>
+            </footer>
+        </main>
+    </div>
+</Layout>

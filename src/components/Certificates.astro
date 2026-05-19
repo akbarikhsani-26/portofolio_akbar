@@ -114,7 +114,7 @@ const certificates = [
 
         <!-- Scanline Animation (Subtle) -->
         <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity">
-          <div class="w-full h-[1px] bg-primary/20 absolute top-0 animate-scanline"></div>
+          <div class="absolute left-0 w-full h-[1px] bg-primary/20 animate-scanline"></div>
         </div>
       </div>
     ))}
@@ -123,10 +123,11 @@ const certificates = [
 
 <style>
   @keyframes scanline {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(400px); }
+    0% { top: 0%; }
+    100% { top: 100%; }
   }
   .animate-scanline {
+    position: absolute;
     animation: scanline 4s linear infinite;
   }
 </style>

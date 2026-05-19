@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <!-- TopNavBar Component -->
@@ -56,7 +57,7 @@
                 <a
                     class="nav-item px-8 py-2 rounded-full font-label-mono text-label-mono uppercase tracking-widest transition-colors duration-300 z-10 text-on-surface-variant hover:text-primary"
                     href="#solutions"
-                    data-section="solutions">SOLUTIONS</a
+                    data-section="solutions">CONTACT</a
                 >
             </div>
         </div>
@@ -82,7 +83,7 @@
         </div>
         <!-- Mobile Navigation Overlay -->
         <div
-            class="fixed inset-0 bg-surface/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-500 md:hidden"
+            class="fixed inset-0 bg-surface/95 backdrop-blur-xl z-40 flex flex-col items-center justify-start overflow-y-auto py-16 gap-6 opacity-0 pointer-events-none transition-all duration-500 md:hidden md:justify-center md:py-0"
             id="mobile-menu"
         >
             <a
@@ -108,12 +109,12 @@
             <a
                 class="nav-item mobile-nav-item text-2xl font-label-mono text-on-surface-variant tracking-widest hover:text-primary transition-colors"
                 href="#credentials"
-                data-section="credentials">CREDENTIALS</a
+                data-section="credentials">CERTIFICATES</a
             >
             <a
                 class="nav-item mobile-nav-item text-2xl font-label-mono text-on-surface-variant tracking-widest hover:text-primary transition-colors"
                 href="#solutions"
-                data-section="solutions">SOLUTIONS</a
+                data-section="solutions">CONTACT</a
             >
             <a
                 href="https://www.linkedin.com/in/nurvianto-akbar-ikhsani"
@@ -145,7 +146,7 @@
     // Header background transition and fade-on-scroll logic
     let hideTimeout;
     let showTimeout;
-    
+
     window.addEventListener("scroll", () => {
         if (!header) return;
 
@@ -184,10 +185,12 @@
             mobileMenu?.classList.add("opacity-0", "pointer-events-none");
             mobileMenu?.classList.remove("opacity-100");
             menuIcon.textContent = "menu";
+            document.body.classList.remove("overflow-hidden");
         } else {
             mobileMenu?.classList.remove("opacity-0", "pointer-events-none");
             mobileMenu?.classList.add("opacity-100");
             menuIcon.textContent = "close";
+            document.body.classList.add("overflow-hidden");
         }
     });
 
@@ -225,6 +228,7 @@
             mobileMenu?.classList.add("opacity-0", "pointer-events-none");
             mobileMenu?.classList.remove("opacity-100");
             if (menuIcon) menuIcon.textContent = "menu";
+            document.body.classList.remove("overflow-hidden");
         });
     });
 

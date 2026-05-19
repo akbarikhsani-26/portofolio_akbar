@@ -1,66 +1,219 @@
 ---
+
 ---
+
 <!-- Hero Section -->
-<section class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 relative py-20">
-<div class="absolute inset-0 z-[-1] opacity-20">
-<img alt="Background showing hand-sketched diagrams morphing into neon tech" class="w-full h-full object-cover" data-alt="A highly detailed visualization of complex data architecture. The left side features rough, white chalk-like sketches of database schemas and entity-relationship diagrams on a textured dark chalkboard. As the image progresses to the right, these lines morph into a glowing, 3D neon neural network with vibrant cyan and purple nodes, symbolizing the transition from messy strategy to high-fidelity execution. The lighting is dark and moody, emphasizing the luminescence of the digital elements against an obsidian background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAev646KmRKuM1UgdvSGVPvDB1CDSRsKC36M6fsoY_CaltdISNt8BmELWpW43b_ncgEbMJS8KHU3tPJ9FYH_frKQNoGR8ob8s542R5SloXCTFiWKFNYZQRVV2YaLnQk1NVrCtjuDJbO9S119rTaNt83uqOufYKPEulNFrmiiyxdMy2mLHIe2wm-FzpJlRVfvNPILiFCdp-virVCfrHPsOXa25PojrBhxpve3iMFkVsHsUQ2i0wzpZej_cRN0fadmQuXOqs55E27vGZd"/>
-<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-surface/40"></div>
-</div>
-<div class="w-full md:w-3/5 space-y-8 z-10">
-<h1 class="font-display-xl text-4xl sm:text-5xl md:text-display-xl text-primary drop-shadow-[0_0_15px_rgba(0,240,255,0.3)]">
-                    Freshman Data Analyst & Business Analyst <span class="text-secondary">(Still Learning...)</span>
-</h1>
-<p class="font-body-lg text-base md:text-body-lg text-on-surface-variant max-w-2xl border-l-2 border-secondary pl-6"><span id="typewriter-text"></span><span class="cursor-blink"></span></p>
-</div>
+<section
+    class="min-h-screen flex flex-col md:flex-row items-center justify-between gap-12 relative py-20 hero-section overflow-hidden"
+>
+    <!-- 3D Interactive Background -->
+    <div
+        class="absolute inset-0 z-[-1] opacity-25 hero-bg-interactive transition-transform duration-300 ease-out"
+        style="transform: translate3d(var(--move-bg-x, 0px), var(--move-bg-y, 0px), 0) scale(1.05);"
+    >
+        <img
+            alt="Hero Background Tech Shapes"
+            class="w-full h-full object-cover"
+            src="/media/hero-bg.png"
+        />
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30"
+        >
+        </div>
+    </div>
+
+    <!-- Left Content Column -->
+    <div class="w-full md:w-1/2 space-y-8 z-10">
+        <h1
+            class="font-display-xl text-4xl sm:text-5xl md:text-display-xl text-primary drop-shadow-[0_0_15px_rgba(79,70,229,0.3)] leading-tight"
+        >
+            Freshman Data Analyst & Business Analyst <span
+                class="text-secondary">(Still Learning...)</span
+            >
+        </h1>
+        <p
+            class="font-body-lg text-base md:text-body-lg text-on-surface-variant max-w-2xl border-l-2 border-secondary pl-6"
+        >
+            <span id="typewriter-text"></span><span class="cursor-blink"></span>
+        </p>
+    </div>
+
+    <!-- Right 3D Column -->
+    <div
+        class="w-full md:w-1/2 flex justify-center items-center z-10 perspective-1000"
+    >
+        <!-- 3D Card Composition -->
+        <div
+            class="hero-card-3d w-full max-w-[420px] aspect-[4/3] bg-surface-container-low border border-outline-variant p-4 shadow-[0_20px_50px_rgba(79,70,229,0.15)] rounded-lg relative transition-transform duration-300 ease-out"
+            style="transform: rotateX(var(--tilt-y, 0deg)) rotateY(var(--tilt-x, 0deg)) translate3d(var(--move-card-x, 0px), var(--move-card-y, 0px), 20px); transform-style: preserve-3d;"
+        >
+            <!-- 3D Glow Effect -->
+            <div
+                class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000 -z-10"
+            >
+            </div>
+
+            <!-- Polaroid Style Photo Frame inside Card -->
+            <div
+                class="w-full h-full bg-surface p-3 pb-8 border border-outline-variant rounded-sm flex flex-col justify-between"
+                style="transform: translateZ(30px); transform-style: preserve-3d;"
+            >
+                <div
+                    class="relative overflow-hidden w-full h-[82%] border border-outline-variant/30 rounded-sm"
+                >
+                    <img
+                        src="/media/hero-bg.png"
+                        alt="3D Analytic Illustration"
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    />
+                </div>
+                <div class="flex justify-between items-center px-1 mt-2">
+                    <span
+                        class="font-label-mono text-[10px] text-primary font-bold tracking-widest"
+                        >Data Analyst & Business Analyst</span
+                    >
+                    <span
+                        class="font-label-mono text-[10px] text-on-surface-variant"
+                        >ROT: ACTIVE</span
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<style>
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+
+    .cursor-blink {
+        display: inline-block;
+        width: 2px;
+        height: 1.2em;
+        background-color: currentColor;
+        margin-left: 2px;
+        animation: blink 0.8s infinite;
+        vertical-align: middle;
+    }
+
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+</style>
+
 <script is:inline>
-  (function() {
-    console.log("Typewriter: Initializing...");
-    const phrases = [
-        "A Data Enthusiast trying to be a Data Analyst & Business Analyst",
-        "Open for any opportunity (Internship or Full-Time)"
-    ];
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+    (function () {
+        console.log("Typewriter: Initializing...");
+        const phrases = [
+            "A Data Enthusiast trying to be a Data Analyst & Business Analyst",
+            "Open for any opportunity (Internship or Full-Time)",
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
 
-    function type() {
-        const textElement = document.getElementById('typewriter-text');
-        if (!textElement) {
-            console.warn("Typewriter: target element not found, retrying...");
-            setTimeout(type, 500);
-            return;
+        function type() {
+            const textElement = document.getElementById("typewriter-text");
+            if (!textElement) {
+                console.warn(
+                    "Typewriter: target element not found, retrying...",
+                );
+                setTimeout(type, 500);
+                return;
+            }
+
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(
+                    0,
+                    charIndex - 1,
+                );
+                charIndex--;
+            } else {
+                textElement.textContent = currentPhrase.substring(
+                    0,
+                    charIndex + 1,
+                );
+                charIndex++;
+            }
+
+            let speed = isDeleting ? 30 : 60;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                speed = 2500;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                speed = 500;
+            }
+
+            setTimeout(type, speed);
         }
-        
-        const currentPhrase = phrases[phraseIndex];
-        
-        if (isDeleting) {
-            textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-            charIndex--;
+
+        if (
+            document.readyState === "complete" ||
+            document.readyState === "interactive"
+        ) {
+            type();
         } else {
-            textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-            charIndex++;
+            window.addEventListener("DOMContentLoaded", type);
         }
 
-        let speed = isDeleting ? 30 : 60;
+        // --- Interactive 3D Parallax Script ---
+        const heroSection = document.querySelector(".hero-section");
+        const heroCard = document.querySelector(".hero-card-3d");
+        const heroBg = document.querySelector(".hero-bg-interactive");
 
-        if (!isDeleting && charIndex === currentPhrase.length) {
-            isDeleting = true;
-            speed = 2500;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            speed = 500;
+        if (
+            heroSection &&
+            heroCard &&
+            heroBg &&
+            window.matchMedia("(hover: hover)").matches
+        ) {
+            heroSection.addEventListener("mousemove", (e) => {
+                const rect = heroSection.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                // Calculate tilt degrees (rotates Y based on X axis mouse movement, X based on Y axis)
+                const tiltX = (x / (rect.width / 2)) * 12;
+                const tiltY = -(y / (rect.height / 2)) * 12;
+
+                // Calculate parallax translation shifts
+                const moveCardX = (x / (rect.width / 2)) * 15;
+                const moveCardY = (y / (rect.height / 2)) * 15;
+
+                const moveBgX = -(x / (rect.width / 2)) * 20;
+                const moveBgY = -(y / (rect.height / 2)) * 20;
+
+                // Apply variables
+                heroCard.style.setProperty("--tilt-x", `${tiltX}deg`);
+                heroCard.style.setProperty("--tilt-y", `${tiltY}deg`);
+                heroCard.style.setProperty("--move-card-x", `${moveCardX}px`);
+                heroCard.style.setProperty("--move-card-y", `${moveCardY}px`);
+
+                heroBg.style.setProperty("--move-bg-x", `${moveBgX}px`);
+                heroBg.style.setProperty("--move-bg-y", `${moveBgY}px`);
+            });
+
+            heroSection.addEventListener("mouseleave", () => {
+                heroCard.style.setProperty("--tilt-x", "0deg");
+                heroCard.style.setProperty("--tilt-y", "0deg");
+                heroCard.style.setProperty("--move-card-x", "0px");
+                heroCard.style.setProperty("--move-card-y", "0px");
+
+                heroBg.style.setProperty("--move-bg-x", "0px");
+                heroBg.style.setProperty("--move-bg-y", "0px");
+            });
         }
-
-        setTimeout(type, speed);
-    }
-
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-        type();
-    } else {
-        window.addEventListener('DOMContentLoaded', type);
-    }
-  })();
+    })();
 </script>

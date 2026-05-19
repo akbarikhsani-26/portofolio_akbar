@@ -1,166 +1,456 @@
 ---
+
 ---
+
 <!-- Capabilities Section -->
-<section class="min-h-screen flex flex-col justify-center py-20 space-y-12" id="strategy">
-<div class="flex items-center gap-4">
-<div class="h-px w-12 bg-secondary"></div>
-<h2 class="font-label-mono text-label-mono text-secondary uppercase tracking-widest">Skills Competencies</h2>
-</div>
-<div class="grid grid-cols-1 gap-8">
-<!-- Column 1 -->
-<div class="py-12 md:py-20 relative overflow-hidden w-full">
-<!-- Expansive Background Decoration -->
-<div class="absolute -right-20 -top-20 opacity-5 transition-opacity">
-<span class="material-symbols-outlined text-[400px] text-primary" data-icon="insights">insights</span>
-</div>
-
-<!-- Immersive Proficiency Chart -->
-<div class="relative w-full px-4 sm:px-gutter">
-    <!-- Desktop / Tablet version: SVG Chart -->
-    <div class="hidden md:block overflow-x-auto overflow-y-hidden pb-4">
-      <svg class="w-full min-w-[800px] h-auto drop-shadow-[0_0_20px_rgba(79,70,229,0.2)]" viewBox="0 0 1600 750" preserveAspectRatio="xMidYMid meet">
-        <!-- Grid Lines (Subtle & Expansive) -->
-        <path d="M 500 50 L 500 620 M 500 620 L 1500 620" fill="none" stroke="var(--color-outline-variant)" stroke-dasharray="8 8" stroke-width="2"></path>
-        
-        <!-- Data Path: Python (70%) -->
-        <text class="italic font-bold" fill="var(--color-on-surface-variant)" font-family="Space Grotesk" font-size="20" text-anchor="end" x="480" y="105">PYTHON</text>
-        <text class="font-label-mono tracking-widest" fill="var(--color-primary)" font-family="Inter" font-size="16" font-weight="600" text-anchor="middle" x="1200" y="85">70%</text>
-        <line stroke="var(--color-primary)" stroke-dasharray="2000" stroke-dashoffset="0" stroke-width="6" x1="500" x2="1200" y1="100" y2="100"></line>
-        <circle class="animate-pulse" cx="1200" cy="100" fill="var(--color-primary)" r="8"></circle>
-
-        <!-- Data Path: SQL (50%) -->
-        <text class="italic font-bold" fill="var(--color-on-surface-variant)" font-family="Space Grotesk" font-size="20" text-anchor="end" x="480" y="185">SQL</text>
-        <text class="font-label-mono tracking-widest" fill="var(--color-primary)" font-family="Inter" font-size="16" font-weight="600" text-anchor="middle" x="1000" y="165">50%</text>
-        <line stroke="var(--color-primary)" stroke-width="6" x1="500" x2="1000" y1="180" y2="180"></line>
-        <circle class="animate-pulse" cx="1000" cy="180" fill="var(--color-primary)" r="8"></circle>
-
-        <!-- Data Path: Data Visualization (80%) -->
-        <text class="italic font-bold" fill="var(--color-on-surface-variant)" font-family="Space Grotesk" font-size="20" text-anchor="end" x="480" y="265">DATA VISUALIZATION</text>
-        <text class="font-label-mono tracking-widest" fill="var(--color-primary)" font-family="Inter" font-size="16" font-weight="600" text-anchor="middle" x="1300" y="245">80%</text>
-        <line stroke="var(--color-primary)" stroke-width="6" x1="500" x2="1300" y1="260" y2="260"></line>
-        <circle class="animate-pulse" cx="1300" cy="260" fill="var(--color-primary)" r="8"></circle>
-
-        <!-- Data Path: Machine Learning (75%) -->
-        <text class="italic font-bold" fill="var(--color-on-surface-variant)" font-family="Space Grotesk" font-size="20" text-anchor="end" x="480" y="345">MACHINE LEARNING</text>
-        <text class="font-label-mono tracking-widest" fill="var(--color-primary)" font-family="Inter" font-size="16" font-weight="600" text-anchor="middle" x="1250" y="325">75%</text>
-        <line stroke="var(--color-primary)" stroke-width="6" x1="500" x2="1250" y1="340" y2="340"></line>
-        <circle class="animate-pulse" cx="1250" cy="340" fill="var(--color-primary)" r="8"></circle>
-
-        <!-- Data Path: PHP (70%) -->
-        <text class="italic font-bold" fill="var(--color-on-surface-variant)" font-family="Space Grotesk" font-size="20" text-anchor="end" x="480" y="425">PHP</text>
-        <text class="font-label-mono tracking-widest" fill="var(--color-primary)" font-family="Inter" font-size="16" font-weight="600" text-anchor="middle" x="1200" y="405">70%</text>
-        <line stroke="var(--color-primary)" stroke-width="6" x1="500" x2="1200" y1="420" y2="420"></line>
-        <circle class="animate-pulse" cx="1200" cy="420" fill="var(--color-primary)" r="8"></circle>
-
-        <!-- Data Path: Canva (85%) -->
-        <text class="italic font-bold" fill="var(--color-on-surface-variant)" font-family="Space Grotesk" font-size="20" text-anchor="end" x="480" y="505">CANVA</text>
-        <text class="font-label-mono tracking-widest" fill="var(--color-primary)" font-family="Inter" font-size="16" font-weight="600" text-anchor="middle" x="1350" y="485">85%</text>
-        <line stroke="var(--color-primary)" stroke-width="6" x1="500" x2="1350" y1="500" y2="500"></line>
-        <circle class="animate-pulse" cx="1350" cy="500" fill="var(--color-primary)" r="8"></circle>
-
-        <!-- Data Path: Excel (85%) -->
-        <text class="italic font-bold" fill="var(--color-on-surface-variant)" font-family="Space Grotesk" font-size="20" text-anchor="end" x="480" y="585">EXCEL</text>
-        <text class="font-label-mono tracking-widest" fill="var(--color-primary)" font-family="Inter" font-size="16" font-weight="600" text-anchor="middle" x="1350" y="565">85%</text>
-        <line stroke="var(--color-primary)" stroke-width="6" x1="500" x2="1350" y1="580" y2="580"></line>
-        <circle class="animate-pulse" cx="1350" cy="580" fill="var(--color-primary)" r="8"></circle>
-
-        <!-- Percentage Markers -->
-        <text fill="var(--color-outline-variant)" font-size="16" x="500" y="660">0%</text>
-        <text fill="var(--color-outline-variant)" font-size="16" x="1000" y="660">50%</text>
-        <text fill="var(--color-outline-variant)" font-size="16" x="1500" y="660">100%</text>
-      </svg>
+<section
+    class="flex flex-col justify-center py-12 md:py-16 space-y-12"
+    id="strategy"
+>
+    <div class="flex items-center gap-4">
+        <div class="h-px w-12 bg-secondary"></div>
+        <h2
+            class="font-label-mono text-label-mono text-secondary uppercase tracking-widest"
+        >
+            Skills Competencies
+        </h2>
     </div>
+    <div class="grid grid-cols-1 gap-8">
+        <!-- Column 1 -->
+        <div class="py-4 relative overflow-hidden w-full">
+            <!-- Expansive Background Decoration -->
+            <div
+                class="absolute -right-20 -top-20 opacity-5 transition-opacity"
+            >
+                <span
+                    class="material-symbols-outlined text-[400px] text-primary"
+                    data-icon="insights">insights</span
+                >
+            </div>
 
-    <!-- Mobile version: Custom CSS Progress Bars -->
-    <div class="block md:hidden space-y-6 px-2">
-      <!-- Python (70%) -->
-      <div class="space-y-2">
-          <div class="flex justify-between items-center text-sm font-label-mono">
-              <span class="font-bold text-on-surface">PYTHON</span>
-              <span class="text-primary font-bold">70%</span>
-          </div>
-          <div class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden">
-              <div class="h-full bg-primary rounded-full" style="width: 70%"></div>
-          </div>
-      </div>
-      
-      <!-- SQL (50%) -->
-      <div class="space-y-2">
-          <div class="flex justify-between items-center text-sm font-label-mono">
-              <span class="font-bold text-on-surface">SQL</span>
-              <span class="text-primary font-bold">50%</span>
-          </div>
-          <div class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden">
-              <div class="h-full bg-primary rounded-full" style="width: 50%"></div>
-          </div>
-      </div>
+            <!-- Immersive Proficiency Chart -->
+            <div class="relative w-full px-4 sm:px-gutter">
+                <!-- Desktop / Tablet version: SVG Chart -->
+                <div
+                    class="hidden md:block overflow-x-auto overflow-y-hidden pb-4"
+                >
+                    <svg
+                        class="w-full min-w-[800px] h-auto drop-shadow-[0_0_20px_rgba(79,70,229,0.2)]"
+                        viewBox="0 0 1600 750"
+                        preserveAspectRatio="xMidYMid meet"
+                    >
+                        <!-- Grid Lines (Subtle & Expansive) -->
+                        <path
+                            d="M 500 50 L 500 620 M 500 620 L 1500 620"
+                            fill="none"
+                            stroke="var(--color-outline-variant)"
+                            stroke-dasharray="8 8"
+                            stroke-width="2"></path>
 
-      <!-- Data Visualization (80%) -->
-      <div class="space-y-2">
-          <div class="flex justify-between items-center text-sm font-label-mono">
-              <span class="font-bold text-on-surface">DATA VISUALIZATION</span>
-              <span class="text-primary font-bold">80%</span>
-          </div>
-          <div class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden">
-              <div class="h-full bg-primary rounded-full" style="width: 80%"></div>
-          </div>
-      </div>
+                        <!-- Data Path: Python (70%) -->
+                        <text
+                            class="italic font-bold"
+                            fill="var(--color-on-surface-variant)"
+                            font-family="Space Grotesk"
+                            font-size="20"
+                            text-anchor="end"
+                            x="480"
+                            y="105">PYTHON</text
+                        >
+                        <text
+                            class="font-label-mono tracking-widest"
+                            fill="var(--color-primary)"
+                            font-family="Inter"
+                            font-size="16"
+                            font-weight="600"
+                            text-anchor="middle"
+                            x="1200"
+                            y="85">70%</text
+                        >
+                        <line
+                            stroke="var(--color-primary)"
+                            stroke-dasharray="2000"
+                            stroke-dashoffset="0"
+                            stroke-width="6"
+                            x1="500"
+                            x2="1200"
+                            y1="100"
+                            y2="100"></line>
+                        <circle
+                            class="animate-pulse"
+                            cx="1200"
+                            cy="100"
+                            fill="var(--color-primary)"
+                            r="8"></circle>
 
-      <!-- Machine Learning (75%) -->
-      <div class="space-y-2">
-          <div class="flex justify-between items-center text-sm font-label-mono">
-              <span class="font-bold text-on-surface">MACHINE LEARNING</span>
-              <span class="text-primary font-bold">75%</span>
-          </div>
-          <div class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden">
-              <div class="h-full bg-primary rounded-full" style="width: 75%"></div>
-          </div>
-      </div>
+                        <!-- Data Path: SQL (50%) -->
+                        <text
+                            class="italic font-bold"
+                            fill="var(--color-on-surface-variant)"
+                            font-family="Space Grotesk"
+                            font-size="20"
+                            text-anchor="end"
+                            x="480"
+                            y="185">SQL</text
+                        >
+                        <text
+                            class="font-label-mono tracking-widest"
+                            fill="var(--color-primary)"
+                            font-family="Inter"
+                            font-size="16"
+                            font-weight="600"
+                            text-anchor="middle"
+                            x="1000"
+                            y="165">50%</text
+                        >
+                        <line
+                            stroke="var(--color-primary)"
+                            stroke-width="6"
+                            x1="500"
+                            x2="1000"
+                            y1="180"
+                            y2="180"></line>
+                        <circle
+                            class="animate-pulse"
+                            cx="1000"
+                            cy="180"
+                            fill="var(--color-primary)"
+                            r="8"></circle>
 
-      <!-- PHP (70%) -->
-      <div class="space-y-2">
-          <div class="flex justify-between items-center text-sm font-label-mono">
-              <span class="font-bold text-on-surface">PHP</span>
-              <span class="text-primary font-bold">70%</span>
-          </div>
-          <div class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden">
-              <div class="h-full bg-primary rounded-full" style="width: 70%"></div>
-          </div>
-      </div>
+                        <!-- Data Path: Data Visualization (80%) -->
+                        <text
+                            class="italic font-bold"
+                            fill="var(--color-on-surface-variant)"
+                            font-family="Space Grotesk"
+                            font-size="20"
+                            text-anchor="end"
+                            x="480"
+                            y="265">DATA VISUALIZATION</text
+                        >
+                        <text
+                            class="font-label-mono tracking-widest"
+                            fill="var(--color-primary)"
+                            font-family="Inter"
+                            font-size="16"
+                            font-weight="600"
+                            text-anchor="middle"
+                            x="1300"
+                            y="245">80%</text
+                        >
+                        <line
+                            stroke="var(--color-primary)"
+                            stroke-width="6"
+                            x1="500"
+                            x2="1300"
+                            y1="260"
+                            y2="260"></line>
+                        <circle
+                            class="animate-pulse"
+                            cx="1300"
+                            cy="260"
+                            fill="var(--color-primary)"
+                            r="8"></circle>
 
-      <!-- Canva (85%) -->
-      <div class="space-y-2">
-          <div class="flex justify-between items-center text-sm font-label-mono">
-              <span class="font-bold text-on-surface">CANVA</span>
-              <span class="text-primary font-bold">85%</span>
-          </div>
-          <div class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden">
-              <div class="h-full bg-primary rounded-full" style="width: 85%"></div>
-          </div>
-      </div>
+                        <!-- Data Path: Machine Learning (75%) -->
+                        <text
+                            class="italic font-bold"
+                            fill="var(--color-on-surface-variant)"
+                            font-family="Space Grotesk"
+                            font-size="20"
+                            text-anchor="end"
+                            x="480"
+                            y="345">MACHINE LEARNING</text
+                        >
+                        <text
+                            class="font-label-mono tracking-widest"
+                            fill="var(--color-primary)"
+                            font-family="Inter"
+                            font-size="16"
+                            font-weight="600"
+                            text-anchor="middle"
+                            x="1250"
+                            y="325">75%</text
+                        >
+                        <line
+                            stroke="var(--color-primary)"
+                            stroke-width="6"
+                            x1="500"
+                            x2="1250"
+                            y1="340"
+                            y2="340"></line>
+                        <circle
+                            class="animate-pulse"
+                            cx="1250"
+                            cy="340"
+                            fill="var(--color-primary)"
+                            r="8"></circle>
 
-      <!-- Excel (85%) -->
-      <div class="space-y-2">
-          <div class="flex justify-between items-center text-sm font-label-mono">
-              <span class="font-bold text-on-surface">EXCEL</span>
-              <span class="text-primary font-bold">85%</span>
-          </div>
-          <div class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden">
-              <div class="h-full bg-primary rounded-full" style="width: 85%"></div>
-          </div>
-      </div>
+                        <!-- Data Path: PHP (70%) -->
+                        <text
+                            class="italic font-bold"
+                            fill="var(--color-on-surface-variant)"
+                            font-family="Space Grotesk"
+                            font-size="20"
+                            text-anchor="end"
+                            x="480"
+                            y="425">PHP</text
+                        >
+                        <text
+                            class="font-label-mono tracking-widest"
+                            fill="var(--color-primary)"
+                            font-family="Inter"
+                            font-size="16"
+                            font-weight="600"
+                            text-anchor="middle"
+                            x="1200"
+                            y="405">70%</text
+                        >
+                        <line
+                            stroke="var(--color-primary)"
+                            stroke-width="6"
+                            x1="500"
+                            x2="1200"
+                            y1="420"
+                            y2="420"></line>
+                        <circle
+                            class="animate-pulse"
+                            cx="1200"
+                            cy="420"
+                            fill="var(--color-primary)"
+                            r="8"></circle>
+
+                        <!-- Data Path: Canva (85%) -->
+                        <text
+                            class="italic font-bold"
+                            fill="var(--color-on-surface-variant)"
+                            font-family="Space Grotesk"
+                            font-size="20"
+                            text-anchor="end"
+                            x="480"
+                            y="505">CANVA</text
+                        >
+                        <text
+                            class="font-label-mono tracking-widest"
+                            fill="var(--color-primary)"
+                            font-family="Inter"
+                            font-size="16"
+                            font-weight="600"
+                            text-anchor="middle"
+                            x="1350"
+                            y="485">85%</text
+                        >
+                        <line
+                            stroke="var(--color-primary)"
+                            stroke-width="6"
+                            x1="500"
+                            x2="1350"
+                            y1="500"
+                            y2="500"></line>
+                        <circle
+                            class="animate-pulse"
+                            cx="1350"
+                            cy="500"
+                            fill="var(--color-primary)"
+                            r="8"></circle>
+
+                        <!-- Data Path: Excel (85%) -->
+                        <text
+                            class="italic font-bold"
+                            fill="var(--color-on-surface-variant)"
+                            font-family="Space Grotesk"
+                            font-size="20"
+                            text-anchor="end"
+                            x="480"
+                            y="585">EXCEL</text
+                        >
+                        <text
+                            class="font-label-mono tracking-widest"
+                            fill="var(--color-primary)"
+                            font-family="Inter"
+                            font-size="16"
+                            font-weight="600"
+                            text-anchor="middle"
+                            x="1350"
+                            y="565">85%</text
+                        >
+                        <line
+                            stroke="var(--color-primary)"
+                            stroke-width="6"
+                            x1="500"
+                            x2="1350"
+                            y1="580"
+                            y2="580"></line>
+                        <circle
+                            class="animate-pulse"
+                            cx="1350"
+                            cy="580"
+                            fill="var(--color-primary)"
+                            r="8"></circle>
+
+                        <!-- Percentage Markers -->
+                        <text
+                            fill="var(--color-outline-variant)"
+                            font-size="16"
+                            x="500"
+                            y="660">0%</text
+                        >
+                        <text
+                            fill="var(--color-outline-variant)"
+                            font-size="16"
+                            x="1000"
+                            y="660">50%</text
+                        >
+                        <text
+                            fill="var(--color-outline-variant)"
+                            font-size="16"
+                            x="1500"
+                            y="660">100%</text
+                        >
+                    </svg>
+                </div>
+
+                <!-- Mobile version: Custom CSS Progress Bars -->
+                <div class="block md:hidden space-y-6 px-2">
+                    <!-- Python (70%) -->
+                    <div class="space-y-2">
+                        <div
+                            class="flex justify-between items-center text-sm font-label-mono"
+                        >
+                            <span class="font-bold text-on-surface">PYTHON</span
+                            >
+                            <span class="text-primary font-bold">70%</span>
+                        </div>
+                        <div
+                            class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden"
+                        >
+                            <div
+                                class="h-full bg-primary rounded-full"
+                                style="width: 70%"
+                            >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SQL (50%) -->
+                    <div class="space-y-2">
+                        <div
+                            class="flex justify-between items-center text-sm font-label-mono"
+                        >
+                            <span class="font-bold text-on-surface">SQL</span>
+                            <span class="text-primary font-bold">50%</span>
+                        </div>
+                        <div
+                            class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden"
+                        >
+                            <div
+                                class="h-full bg-primary rounded-full"
+                                style="width: 50%"
+                            >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Visualization (80%) -->
+                    <div class="space-y-2">
+                        <div
+                            class="flex justify-between items-center text-sm font-label-mono"
+                        >
+                            <span class="font-bold text-on-surface"
+                                >DATA VISUALIZATION</span
+                            >
+                            <span class="text-primary font-bold">80%</span>
+                        </div>
+                        <div
+                            class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden"
+                        >
+                            <div
+                                class="h-full bg-primary rounded-full"
+                                style="width: 80%"
+                            >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning (75%) -->
+                    <div class="space-y-2">
+                        <div
+                            class="flex justify-between items-center text-sm font-label-mono"
+                        >
+                            <span class="font-bold text-on-surface"
+                                >MACHINE LEARNING</span
+                            >
+                            <span class="text-primary font-bold">75%</span>
+                        </div>
+                        <div
+                            class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden"
+                        >
+                            <div
+                                class="h-full bg-primary rounded-full"
+                                style="width: 75%"
+                            >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHP (70%) -->
+                    <div class="space-y-2">
+                        <div
+                            class="flex justify-between items-center text-sm font-label-mono"
+                        >
+                            <span class="font-bold text-on-surface">PHP</span>
+                            <span class="text-primary font-bold">70%</span>
+                        </div>
+                        <div
+                            class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden"
+                        >
+                            <div
+                                class="h-full bg-primary rounded-full"
+                                style="width: 70%"
+                            >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canva (85%) -->
+                    <div class="space-y-2">
+                        <div
+                            class="flex justify-between items-center text-sm font-label-mono"
+                        >
+                            <span class="font-bold text-on-surface">CANVA</span>
+                            <span class="text-primary font-bold">85%</span>
+                        </div>
+                        <div
+                            class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden"
+                        >
+                            <div
+                                class="h-full bg-primary rounded-full"
+                                style="width: 85%"
+                            >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Excel (85%) -->
+                    <div class="space-y-2">
+                        <div
+                            class="flex justify-between items-center text-sm font-label-mono"
+                        >
+                            <span class="font-bold text-on-surface">EXCEL</span>
+                            <span class="text-primary font-bold">85%</span>
+                        </div>
+                        <div
+                            class="w-full h-3 bg-surface-container-high border border-outline-variant rounded-full overflow-hidden"
+                        >
+                            <div
+                                class="h-full bg-primary rounded-full"
+                                style="width: 85%"
+                            >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Column 2 -->
     </div>
-</div>
-
-<div class="mt-12 flex justify-between items-center px-gutter">
-<p class="font-label-mono text-sm text-on-surface-variant uppercase tracking-[0.3em]">System Diagnostics: Operational</p>
-<div class="flex gap-2">
-<div class="w-2 h-2 bg-surface-tint"></div>
-<div class="w-2 h-2 bg-surface-tint/50"></div>
-<div class="w-2 h-2 bg-surface-tint/20"></div>
-</div>
-</div>
-</div>
-<!-- Column 2 -->
-</div>
 </section>
